@@ -1,0 +1,23 @@
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+server-->browser: HTML-code
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+server-->browser: spa.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+
+Link to diagrame:
+https://www.websequencediagrams.com/?lz=YnJvd3Nlci0-c2VydmVyOiBIVFRQIEdFVCBodHRwczovL2Z1bGxzdGFjay1leGFtcGxlYXBwLmhlcm9rdWFwcC5jb20vc3BhCgA6Bi0tPgBLBzogSFRNTC1jb2RlCgAgRW1haW4uY3NzAFcTABIJAIEGSC5qAFMUABIHCm5vdGUgb3ZlciAAgWQIAIFaCCBzdGFydHMgZXhlY3V0aW5nIGpzAIF9BnRoYXQgcmVxdWVzdHMgSlNPTiBkYXRhIGZyb20gAIJ2BiAKZW5kIG5vdGUKAIFsRmRhdGEuanNvbgCDChNbeyBjb250ZW50OiAiSFRNTCBpcyBlYXN5IiwgZGF0ZTogIjIwMTktMDUtMjMiIH0sIC4uLl0AgV8dAIFvBmVzIHRoZSBldmVudCBoYW5kbGVyAIF2CG5kZXJzAIFdBXMgdG8gZGlzcGxheQCBbQo&s=default

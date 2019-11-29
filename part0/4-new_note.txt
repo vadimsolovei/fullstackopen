@@ -1,0 +1,31 @@
+note over browser:
+User submits form
+end note
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+server-->browser: Server asks for redirect, with which the browser has to do a new HTTP GET request to the address defined in the header's Location - the address notes.
+note over browser:
+Page reloads
+end note
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+server-->browser: HTML-code
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server-->browser: main.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+
+Link to diagrame:
+https://www.websequencediagrams.com/?lz=bm90ZSBvdmVyIGJyb3dzZXI6ClVzZXIgc3VibWl0cyBmb3JtCmVuZCBub3RlCgAdBy0-c2VydmVyOiBIVFRQIFBPU1QgaHR0cHM6Ly9mdWxsc3RhY2stZXhhbXBsZWFwcC5oZXJva3VhcHAuY29tL25ld18ASgUAQAYtLT4AdAggUwBTBSBhc2sAdgUgcmVkaXJlY3QsIHdpdGggd2hpY2ggdGhlAIEmCCBoYXMgdG8gZG8gYSBuZXcAgQsGR0VUIHJlcXVlc3QgdG8AKwVhZGRyZXNzIGRlZmluZWQgaW4AQgVoZWFkZXIncyBMb2NhdGlvbiAtACINbm90ZXMuCgCCExNQYWdlIHJlbG9hZHMAggEgR0UAgXIub3RlcwCCChNIVE1MLWNvZAAgR21haW4uY3MAVhQAEgkAH0pqAE8ZanMKAIJNFACDWghzdGFydHMgZXhlY3V0aW5nIGpzAIF_BnRoYXQAg18IcyBKU09OIGRhdGEgZnJvbSAAhRsGIACFMQoAglVGZGF0YS5qc29uAIUpE1t7IGNvbnRlbnQ6ICJIVE1MIGlzIGVhc3kiLCBkYXRlOiAiMjAxOS0wNS0yMyIgfSwgLi4uXQCBXx0AgW8GZXMAhW4FZXZlbnQgaGFuZGxlcgCBdghuZGVyAIUgBwCGAwVpc3BsYXkAhygK&s=default

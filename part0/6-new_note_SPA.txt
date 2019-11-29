@@ -1,0 +1,19 @@
+note over browser:
+User submits form
+end note
+note over browser:
+browser starts executing js-code
+end note
+note over browser:
+The event handler creates a new note,
+adds it to the notes list with the command notes.push(note),
+and rerenders the note list on the page
+end note
+note over browser:
+The new data is to be sent with an HTTP POST request and the data type is to be JSON.
+end note
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+
+Link to diagrame:
+https://www.websequencediagrams.com/?lz=bm90ZSBvdmVyIGJyb3dzZXI6ClVzZXIgc3VibWl0cyBmb3JtCmVuZCBub3RlCgAbEwAwByBzdGFydHMgZXhlY3V0aW5nIGpzLWNvZGUAIB1UaGUgZXZlbnQgaGFuZGxlciBjcmVhdGVzIGEgbmV3AHAFLAphZGRzIGl0IHRvIHRoZQCBBQVzIGxpc3Qgd2l0aAAPBWNvbW1hAIEfB3MucHVzaChub3RlKSwKYW5kIHJlcmVuZGVycwA3CQA5Bm9uAEwFcGFnAIEFIm5ldyBkYXRhIGlzIHRvIGJlIHNlbgB7B2FuIEhUVFAgUE9TVCByZXF1ZXN0IGFuZACBKgUAMAV0eXBlADAKSlNPTi4AgkwKAIJzBy0-c2VydmVyOgBCC2h0dHBzOi8vZnVsbHN0YWNrLWV4YW1wbGVhcHAuaGVyb2t1YXBwLmNvbS9uZXdfbm90ZV9zcGEKCg&s=default
